@@ -15,6 +15,7 @@ title: Home
     <li><a href="/social-networks/">🔗 Social Networks</a> - OAuth, API integration, authentication</li>
     <li><a href="/ai-study/">🤖 AI & Self-Study</a> - Machine Learning, LLMs, Deep Learning</li>
     <li><a href="/devops/">⚙️ DevOps</a> - Docker, CI/CD, infrastructure tooling</li>
+    <li><a href="/cloud-providers/">☁️ Cloud Providers</a> - DigitalOcean, CloudFront</li>
     <li><a href="/quick-reference/">💡 Quick Reference</a> - Commands, links, and resources</li>
   </ul>
 
@@ -59,6 +60,13 @@ title: Home
   <h3>DevOps</h3>
   <ul>
     {% for post in site.devops limit:5 %}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+
+  <h3>Cloud Providers</h3>
+  <ul>
+    {% for post in site.cloud_providers limit:5 %}
       <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>

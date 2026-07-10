@@ -25,7 +25,13 @@ orvie.github.io/
 │
 ├── devops.md                  # Hub page for the "DevOps" section
 ├── _devops/
-│   └── 01-docker-basics.md
+│   ├── 01-docker-basics.md
+│   └── 02-dockerfile-best-practices.md
+│
+├── cloud-providers.md         # Hub page for the "Cloud Providers" section
+├── _cloud_providers/
+│   ├── 01-digitalocean-droplets.md
+│   └── 02-cloudfront-cdn.md
 │
 └── quick-reference.md         # Standalone page (not backed by a collection)
 ```

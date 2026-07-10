@@ -27,6 +27,7 @@ header_pages:
   - social-networks.md
   - ai-study.md
   - devops.md
+  - cloud-providers.md
   - quick-reference.md
 
 # Exclude from processing
@@ -61,6 +62,11 @@ collections:
     output: true
     permalink: /devops/:name/
 
+  # Cloud Providers
+  cloud_providers:
+    output: true
+    permalink: /cloud-providers/:name/
+
 # Front matter defaults
 defaults:
   - scope:
@@ -77,6 +83,10 @@ defaults:
       layout: "page"
   - scope:
       path: "_devops"
+    values:
+      layout: "page"
+  - scope:
+      path: "_cloud_providers"
     values:
       layout: "page"
 
