@@ -1,0 +1,85 @@
+# Jekyll Configuration for Orvie's Knowledge Base
+
+# Site Settings
+title: Orvie's Knowledge Base
+description: Personal knowledge base for project notes, AWS configuration, social networks, and AI learning
+url: https://orvie.github.io
+baseurl: ""
+
+# Author Information
+author:
+  name: Orvie
+  email: orvie@users.noreply.github.com
+  github: orvie
+
+# Build Settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Navigation Menu
+header_pages:
+  - web-deployment.md
+  - social-networks.md
+  - ai-study.md
+  - quick-reference.md
+
+# Exclude from processing
+exclude:
+  - .github
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+
+# Collections for organized content
+collections:
+  web_deployment:
+    output: true
+    permalink: /:collection/:path/
+  social_networks:
+    output: true
+    permalink: /:collection/:path/
+  ai_study:
+    output: true
+    permalink: /:collection/:path/
+
+# Front matter defaults
+defaults:
+  - scope:
+      path: "_web_deployment"
+      type: "web_deployment"
+    values:
+      layout: "page"
+      category: "web-deployment"
+  - scope:
+      path: "_social_networks"
+      type: "social_networks"
+    values:
+      layout: "page"
+      category: "social-networks"
+  - scope:
+      path: "_ai_study"
+      type: "ai_study"
+    values:
+      layout: "page"
+      category: "ai-study"
+
+# Pagination
+paginate: 10
+paginate_path: /page:num/
+
+# SEO & Social
+twitter:
+  username: your-twitter-handle
+social:
+  name: Orvie
+  links:
+    - https://github.com/orvie
+    - https://twitter.com/your-handle
+
+# Analytics (optional)
+# google_analytics: YOUR_TRACKING_ID
