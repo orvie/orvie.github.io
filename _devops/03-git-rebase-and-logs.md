@@ -3,8 +3,6 @@ layout: page
 title: Git Notes
 ---
 
-# Git Notes
-
 ## Remote config for github two different accounts different sshkey
 
 ```conf
