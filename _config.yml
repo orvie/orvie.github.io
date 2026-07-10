@@ -20,13 +20,15 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
-# Navigation Menu
+# Navigation Menu - Main Categories
 header_pages:
   - index.md
-  - work.md
-  - projects.md
-  - architecture.md
-  - cloud-services.md
+  - web-development.md
+  - cloud-providers.md
+  - backend-development.md
+  - architecture-patterns.md
+  - databases.md
+  - tools-devops.md
 
 # Exclude from processing
 exclude:
@@ -38,140 +40,97 @@ exclude:
 
 # Collections for organized content
 collections:
-  # Work-related documentation
-  work_patterns:
+  # Web Development
+  web_development:
     output: true
-    permalink: /work/patterns/:name/
-  work_best_practices:
-    output: true
-    permalink: /work/best-practices/:name/
-  work_tools:
-    output: true
-    permalink: /work/tools/:name/
+    permalink: /web-development/:name/
   
-  # Side projects and learning
-  projects_aws:
-    output: true
-    permalink: /projects/aws/:name/
-  projects_digitalocean:
-    output: true
-    permalink: /projects/digitalocean/:name/
-  projects_other:
-    output: true
-    permalink: /projects/other/:name/
-  
-  # Architecture patterns
-  architecture_patterns:
-    output: true
-    permalink: /architecture/:name/
-  architecture_principles:
-    output: true
-    permalink: /architecture/principles/:name/
-  
-  # Cloud Services deep dives
+  # Cloud Providers
   cloud_aws:
     output: true
-    permalink: /cloud/aws/:name/
+    permalink: /cloud-providers/aws/:name/
   cloud_digitalocean:
     output: true
-    permalink: /cloud/digitalocean/:name/
+    permalink: /cloud-providers/digitalocean/:name/
   cloud_cloudflare:
     output: true
-    permalink: /cloud/cloudflare/:name/
+    permalink: /cloud-providers/cloudflare/:name/
   
-  # Backend technologies
+  # Backend Development
   backend_java:
     output: true
-    permalink: /backend/java/:name/
-  backend_databases:
+    permalink: /backend-development/java/:name/
+  backend_springboot:
     output: true
-    permalink: /backend/databases/:name/
+    permalink: /backend-development/springboot/:name/
   backend_apis:
     output: true
-    permalink: /backend/apis/:name/
-  
-  # Quick snippets and commands
-  snippets:
+    permalink: /backend-development/apis/:name/
+  backend_patterns:
     output: true
-    permalink: /snippets/:name/
+    permalink: /backend-development/patterns/:name/
+  
+  # Architecture Patterns
+  architecture:
+    output: true
+    permalink: /architecture-patterns/:name/
+  
+  # Databases
+  databases:
+    output: true
+    permalink: /databases/:name/
+  
+  # Tools & DevOps
+  devops:
+    output: true
+    permalink: /tools-devops/:name/
 
 # Front matter defaults
 defaults:
   - scope:
-      path: "_work_patterns"
+      path: "_web_development"
     values:
       layout: "page"
-      category: "work-patterns"
-  - scope:
-      path: "_work_best_practices"
-    values:
-      layout: "page"
-      category: "work-best-practices"
-  - scope:
-      path: "_work_tools"
-    values:
-      layout: "page"
-      category: "work-tools"
-  - scope:
-      path: "_projects_aws"
-    values:
-      layout: "page"
-      category: "projects-aws"
-  - scope:
-      path: "_projects_digitalocean"
-    values:
-      layout: "page"
-      category: "projects-digitalocean"
-  - scope:
-      path: "_projects_other"
-    values:
-      layout: "page"
-      category: "projects-other"
-  - scope:
-      path: "_architecture_patterns"
-    values:
-      layout: "page"
-      category: "architecture-patterns"
-  - scope:
-      path: "_architecture_principles"
-    values:
-      layout: "page"
-      category: "architecture-principles"
   - scope:
       path: "_cloud_aws"
     values:
       layout: "page"
-      category: "cloud-aws"
   - scope:
       path: "_cloud_digitalocean"
     values:
       layout: "page"
-      category: "cloud-digitalocean"
   - scope:
       path: "_cloud_cloudflare"
     values:
       layout: "page"
-      category: "cloud-cloudflare"
   - scope:
       path: "_backend_java"
     values:
       layout: "page"
-      category: "backend-java"
   - scope:
-      path: "_backend_databases"
+      path: "_backend_springboot"
     values:
       layout: "page"
-      category: "backend-databases"
   - scope:
       path: "_backend_apis"
     values:
       layout: "page"
-      category: "backend-apis"
   - scope:
-      path: "_snippets"
+      path: "_backend_patterns"
     values:
       layout: "page"
-      category: "snippets"
+  - scope:
+      path: "_architecture"
+    values:
+      layout: "page"
+  - scope:
+      path: "_databases"
+    values:
+      layout: "page"
+  - scope:
+      path: "_devops"
+    values:
+      layout: "page"
 
 # Pagination
 paginate: 10
