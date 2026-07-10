@@ -25,11 +25,13 @@ Each knowledge area follows a two-level pattern:
 
 `index.md` is the site homepage and links out to each hub page.
 
-`_config.yml`'s `collections:` and `header_pages:` are kept in sync with the real folders/files (`_web_deployment`, `_social_networks`, `_ai_study` and their hub pages). If you add or rename a collection folder or hub page, update `_config.yml` in the same change — Jekyll silently no-ops `{% for post in site.<name> %}` loops for any collection not declared there.
+`_config.yml`'s `collections:` and `header_pages:` are kept in sync with the real folders/files (`_web_deployment`, `_social_networks`, `_ai_study` and their hub pages). If you add or rename a collection folder or hub page, update `_config.yml` in the same change — Jekyll silently no-ops the hub page's collection loop for any collection not declared there.
+
+Note: `README.md` and this file are listed in `_config.yml`'s `exclude:` so Jekyll never runs them through Liquid/Markdown rendering — without that, `jekyll-optional-front-matter` (enabled on GitHub Pages) would process any front-matter-less `.md` file as a page, and Liquid-tag examples written as literal text in these docs would fail to parse.
 
 ## Adding a new documentation topic
 
 1. Create an underscore-prefixed folder for the topic's detail docs (e.g. `_databases/`), with each doc using `layout: page` front matter.
 2. Register that folder under `collections:` in `_config.yml` with an `output: true` and a `permalink:` pattern, and add a matching `defaults:` scope entry (at minimum `layout: page`).
-3. Create a top-level hub page (`databases.md`) with `layout: page`, a `permalink:`, and a `{% for post in site.<collection_name> %}` loop to list its docs.
+3. Create a top-level hub page (`databases.md`) with `layout: page`, a `permalink:`, and a loop over the new collection (e.g. `site.databases`) to list its docs.
 4. Link the hub page from `index.md` and, if used for site nav, add it to `header_pages` in `_config.yml`.
