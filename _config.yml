@@ -1,8 +1,8 @@
-# Jekyll Configuration for Backend Engineer Knowledge Base
+# Jekyll Configuration for Orvie's Knowledge Base
 
 # Site Settings
-title: Backend Engineer's Knowledge Base
-description: Personal knowledge base for backend engineering - work notes, architecture patterns, cloud services, and side projects
+title: Orvie's Knowledge Base
+description: Personal knowledge base for project notes, configuration tips, and learning resources
 url: https://orvie.github.io
 baseurl: ""
 
@@ -23,12 +23,11 @@ plugins:
 # Navigation Menu - Main Categories
 header_pages:
   - index.md
-  - web-development.md
-  - cloud-providers.md
-  - backend-development.md
-  - architecture-patterns.md
-  - databases.md
-  - tools-devops.md
+  - web-deployment.md
+  - social-networks.md
+  - ai-study.md
+  - devops.md
+  - quick-reference.md
 
 # Exclude from processing
 exclude:
@@ -40,91 +39,38 @@ exclude:
 
 # Collections for organized content
 collections:
-  # Web Development
-  web_development:
+  # Web Deployment
+  web_deployment:
     output: true
-    permalink: /web-development/:name/
-  
-  # Cloud Providers
-  cloud_aws:
+    permalink: /web-deployment/:name/
+
+  # Social Networks
+  social_networks:
     output: true
-    permalink: /cloud-providers/aws/:name/
-  cloud_digitalocean:
+    permalink: /social-networks/:name/
+
+  # AI & Self-Study
+  ai_study:
     output: true
-    permalink: /cloud-providers/digitalocean/:name/
-  cloud_cloudflare:
-    output: true
-    permalink: /cloud-providers/cloudflare/:name/
-  
-  # Backend Development
-  backend_java:
-    output: true
-    permalink: /backend-development/java/:name/
-  backend_springboot:
-    output: true
-    permalink: /backend-development/springboot/:name/
-  backend_apis:
-    output: true
-    permalink: /backend-development/apis/:name/
-  backend_patterns:
-    output: true
-    permalink: /backend-development/patterns/:name/
-  
-  # Architecture Patterns
-  architecture:
-    output: true
-    permalink: /architecture-patterns/:name/
-  
-  # Databases
-  databases:
-    output: true
-    permalink: /databases/:name/
-  
-  # Tools & DevOps
+    permalink: /ai-study/:name/
+
+  # DevOps
   devops:
     output: true
-    permalink: /tools-devops/:name/
+    permalink: /devops/:name/
 
 # Front matter defaults
 defaults:
   - scope:
-      path: "_web_development"
+      path: "_web_deployment"
     values:
       layout: "page"
   - scope:
-      path: "_cloud_aws"
+      path: "_social_networks"
     values:
       layout: "page"
   - scope:
-      path: "_cloud_digitalocean"
-    values:
-      layout: "page"
-  - scope:
-      path: "_cloud_cloudflare"
-    values:
-      layout: "page"
-  - scope:
-      path: "_backend_java"
-    values:
-      layout: "page"
-  - scope:
-      path: "_backend_springboot"
-    values:
-      layout: "page"
-  - scope:
-      path: "_backend_apis"
-    values:
-      layout: "page"
-  - scope:
-      path: "_backend_patterns"
-    values:
-      layout: "page"
-  - scope:
-      path: "_architecture"
-    values:
-      layout: "page"
-  - scope:
-      path: "_databases"
+      path: "_ai_study"
     values:
       layout: "page"
   - scope:
