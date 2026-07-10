@@ -3,7 +3,26 @@ layout: page
 title: Git Notes
 ---
 
-# Git Rebasing & Logs
+# Git Notes
+
+## Remote config for github two different accounts different sshkey
+
+```conf
+Host github.com
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/github-orvie
+
+Host github-orvie1011
+  HostName github.com
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_ed25519
+```
+
+```bash
+# Set origin using alias
+# Note: here im using organizations <org-name>/<repo-name>.git
+git remote set-url origin git@github-orvie1011:orvie1011/<repo-name>.git
+```
 
 ## Useful Log Views
 
