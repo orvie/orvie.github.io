@@ -1,8 +1,8 @@
-# Jekyll Configuration for Orvie's Knowledge Base
+# Jekyll Configuration for Backend Engineer Knowledge Base
 
 # Site Settings
-title: Orvie's Knowledge Base
-description: Personal knowledge base for project notes, AWS configuration, social networks, and AI learning
+title: Backend Engineer's Knowledge Base
+description: Personal knowledge base for backend engineering - work notes, architecture patterns, cloud services, and side projects
 url: https://orvie.github.io
 baseurl: ""
 
@@ -22,10 +22,11 @@ plugins:
 
 # Navigation Menu
 header_pages:
-  - web-deployment.md
-  - social-networks.md
-  - ai-study.md
-  - quick-reference.md
+  - index.md
+  - work.md
+  - projects.md
+  - architecture.md
+  - cloud-services.md
 
 # Exclude from processing
 exclude:
@@ -37,36 +38,140 @@ exclude:
 
 # Collections for organized content
 collections:
-  web_deployment:
+  # Work-related documentation
+  work_patterns:
     output: true
-    permalink: /:collection/:path/
-  social_networks:
+    permalink: /work/patterns/:name/
+  work_best_practices:
     output: true
-    permalink: /:collection/:path/
-  ai_study:
+    permalink: /work/best-practices/:name/
+  work_tools:
     output: true
-    permalink: /:collection/:path/
+    permalink: /work/tools/:name/
+  
+  # Side projects and learning
+  projects_aws:
+    output: true
+    permalink: /projects/aws/:name/
+  projects_digitalocean:
+    output: true
+    permalink: /projects/digitalocean/:name/
+  projects_other:
+    output: true
+    permalink: /projects/other/:name/
+  
+  # Architecture patterns
+  architecture_patterns:
+    output: true
+    permalink: /architecture/:name/
+  architecture_principles:
+    output: true
+    permalink: /architecture/principles/:name/
+  
+  # Cloud Services deep dives
+  cloud_aws:
+    output: true
+    permalink: /cloud/aws/:name/
+  cloud_digitalocean:
+    output: true
+    permalink: /cloud/digitalocean/:name/
+  cloud_cloudflare:
+    output: true
+    permalink: /cloud/cloudflare/:name/
+  
+  # Backend technologies
+  backend_java:
+    output: true
+    permalink: /backend/java/:name/
+  backend_databases:
+    output: true
+    permalink: /backend/databases/:name/
+  backend_apis:
+    output: true
+    permalink: /backend/apis/:name/
+  
+  # Quick snippets and commands
+  snippets:
+    output: true
+    permalink: /snippets/:name/
 
 # Front matter defaults
 defaults:
   - scope:
-      path: "_web_deployment"
-      type: "web_deployment"
+      path: "_work_patterns"
     values:
       layout: "page"
-      category: "web-deployment"
+      category: "work-patterns"
   - scope:
-      path: "_social_networks"
-      type: "social_networks"
+      path: "_work_best_practices"
     values:
       layout: "page"
-      category: "social-networks"
+      category: "work-best-practices"
   - scope:
-      path: "_ai_study"
-      type: "ai_study"
+      path: "_work_tools"
     values:
       layout: "page"
-      category: "ai-study"
+      category: "work-tools"
+  - scope:
+      path: "_projects_aws"
+    values:
+      layout: "page"
+      category: "projects-aws"
+  - scope:
+      path: "_projects_digitalocean"
+    values:
+      layout: "page"
+      category: "projects-digitalocean"
+  - scope:
+      path: "_projects_other"
+    values:
+      layout: "page"
+      category: "projects-other"
+  - scope:
+      path: "_architecture_patterns"
+    values:
+      layout: "page"
+      category: "architecture-patterns"
+  - scope:
+      path: "_architecture_principles"
+    values:
+      layout: "page"
+      category: "architecture-principles"
+  - scope:
+      path: "_cloud_aws"
+    values:
+      layout: "page"
+      category: "cloud-aws"
+  - scope:
+      path: "_cloud_digitalocean"
+    values:
+      layout: "page"
+      category: "cloud-digitalocean"
+  - scope:
+      path: "_cloud_cloudflare"
+    values:
+      layout: "page"
+      category: "cloud-cloudflare"
+  - scope:
+      path: "_backend_java"
+    values:
+      layout: "page"
+      category: "backend-java"
+  - scope:
+      path: "_backend_databases"
+    values:
+      layout: "page"
+      category: "backend-databases"
+  - scope:
+      path: "_backend_apis"
+    values:
+      layout: "page"
+      category: "backend-apis"
+  - scope:
+      path: "_snippets"
+    values:
+      layout: "page"
+      category: "snippets"
 
 # Pagination
 paginate: 10
@@ -79,7 +184,6 @@ social:
   name: Orvie
   links:
     - https://github.com/orvie
-    - https://twitter.com/your-handle
 
 # Analytics (optional)
 # google_analytics: YOUR_TRACKING_ID
