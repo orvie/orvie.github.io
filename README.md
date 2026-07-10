@@ -26,7 +26,8 @@ orvie.github.io/
 ├── devops.md                  # Hub page for the "DevOps" section
 ├── _devops/
 │   ├── 01-docker-basics.md
-│   └── 02-dockerfile-best-practices.md
+│   ├── 02-dockerfile-best-practices.md
+│   └── 03-git-rebase-and-logs.md
 │
 ├── cloud-providers.md         # Hub page for the "Cloud Providers" section
 ├── _cloud_providers/
