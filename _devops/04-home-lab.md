@@ -19,9 +19,11 @@ Para interceptar el tráfico local SSH y enrutarlo de forma transparente a trav�
 
 ### Paso A: Instalar el cliente del túnel
 Ejecutar en la terminal local (según tu sistema operativo):
+
 ```bash
 # En Windows (usando PowerShell o CMD limpio)
 winget install Cloudflare.cloudflared
+```
 
-# En macOS (usando Homebrew)
-brew install cloudflare/cloudflare/cloudflared
+## 99. Ia lab local
+[Install gemma4 guide](https://fair-fruitadens-35f.notion.site/KireBot-Gu-a-Completa-Monta-Tu-Propio-Departamento-de-Inteligencia-Artificial-Local-Desde-Cero-33cf5d11703680deb5fcdbc85ca3ab11)
