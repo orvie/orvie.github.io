@@ -5,7 +5,7 @@ title: Home Laboratory
 
 # Guía de Configuración de Acceso Remoto Seguro (Cloudflare Tunnels & SSH)
 
-Este documento resume la arquitectura y los pasos exactos realizados para configurar el acceso remoto seguro a tu ThinkCentre utilizando **Cloudflare Tunnels**. Con esta configuración, puedes conectarte de forma segura desde cualquier red del mundo por SSH o HTTP sin abrir puertos en tu router (CGNAT-proof) mediante una arquitectura de red zero-trust.
+Este documento resume la arquitectura y los pasos exactos realizados para configurar el acceso remoto seguro a tu PC utilizando **Cloudflare Tunnels**. Con esta configuración, puedes conectarte de forma segura desde cualquier red del mundo por SSH o HTTP sin abrir puertos en tu router (CGNAT-proof) mediante una arquitectura de red zero-trust.
 
 ## 1. Configuración de la Placa Base (Hardware)
 Para garantizar que el servidor vuelva a la vida automáticamente ante un corte de energía o caída de tensión:
@@ -24,6 +24,9 @@ Ejecutar en la terminal local (según tu sistema operativo):
 # En Windows (usando PowerShell o CMD limpio)
 winget install Cloudflare.cloudflared
 ```
+
+## 88. Whatsapp chatbot types
+[Chatbot Types](https://comunidad.eriktaveras.com/resources/los-4-tipos-de-chatbot-de-ia-para-whatsapp/)
 
 ## 99. Ia lab local
 [Install gemma4 guide](https://fair-fruitadens-35f.notion.site/KireBot-Gu-a-Completa-Monta-Tu-Propio-Departamento-de-Inteligencia-Artificial-Local-Desde-Cero-33cf5d11703680deb5fcdbc85ca3ab11)
