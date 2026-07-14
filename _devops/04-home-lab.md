@@ -30,7 +30,7 @@ winget install Cloudflare.cloudflared
 
 ## 100. Infra IA lab
 
-![Infra preview](../public/local_ai_infra.jpg)
+![Infra preview]({{ "/public/local_ai_infra.jpg" | relative_url }})
 
 | Componente / Parte | Tipo de Elemento | Especificación Clave | Plataforma de Compra | Precio Estimado (COP) |
 | :--- | :--- | :--- | :--- | :--- |
