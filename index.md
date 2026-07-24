@@ -4,7 +4,6 @@ title: Home
 ---
 
 <div class="home">
-  <h1 class="page-heading">Welcome to Orvie's Knowledge Base</h1>
   
   <p>This is a personal knowledge base for project notes, configuration tips, and learning resources.</p>
 
